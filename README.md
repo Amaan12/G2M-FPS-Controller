@@ -1,12 +1,45 @@
-# G2M-FPS-Controller
-G2M FPS Assignment
+# G2M FPS Controller 🎯
+> A fast-paced Unity FPS controller prototype with grenades, shooting, and enemy AI.
 
-1. Use the AK-47, as other weapons are not setup
-2. Equip/Drop with F key
-3. There are 5 types of grenades  
-    - Flashbang  
-    - Smoke  
-    - Explosive (no particle fx, only force)  
-    - Gravity (pushes you up)  
-    - Molotov  
-4. Every interval new enemy is spawned. On Death scene will reload.
+![Unity](https://img.shields.io/badge/engine-Unity-blue)
+![Language](https://img.shields.io/badge/language-C%23-239120)
+![Status](https://img.shields.io/badge/status-In_Progress-yellow)
+
+---
+
+## 🚀 Features
+- AK-47 weapon (other weapons aren't setup)
+- 5 grenade types (flash, smoke, explosive, gravity, molotov)  
+- Enemies spawn periodically  
+- Scene reloads on player death  
+
+---
+
+## 🎮 Controls
+<details>
+<summary>Click to view</summary>
+
+| Action | Key |
+|--------|-----|
+| Move | WASD |
+| Jump | Space |
+| Equip/Drop | F |
+| Shoot / Throw Grenade | Left Click |
+</details>
+
+---
+
+## 📷 Screenshots
+![Gameplay](images/screenshot1.png)
+
+---
+
+## 🧩 How to Play
+1. Clone the repo  
+2. Open in Unity  
+3. Hit Play!  
+
+---
+
+## 🧑‍💻 Author
+**Hunter**
