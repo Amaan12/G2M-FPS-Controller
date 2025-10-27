@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Dave FPS Controller.sln"
+    "dotnet.defaultSolution": "G2M-FPS-Controller.sln"
 }

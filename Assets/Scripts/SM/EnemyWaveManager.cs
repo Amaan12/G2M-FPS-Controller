@@ -20,8 +20,8 @@ public class EnemyWaveManager : MonoBehaviour
     void SpawnEnemy()
     {
         Enemy enemyInstance = enemyPool.Get();
-        enemyInstance.GetComponent<HealthController>().AssignPool(enemyPool);
-        enemyInstance.GetComponent<HealthController>().health = enemyInstance.GetComponent<HealthController>().maxHealth;
+        enemyInstance.GetComponent<EnemyHealthController>().AssignPool(enemyPool);
+        enemyInstance.GetComponent<EnemyHealthController>().health = enemyInstance.GetComponent<EnemyHealthController>().maxHealth;
         enemyInstance.player = player;
         // Vector3 randomPosOnCollider = a world position randomly on the collider bounds
         Collider collider = GetComponent<Collider>();

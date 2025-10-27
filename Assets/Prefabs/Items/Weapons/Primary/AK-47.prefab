@@ -85,8 +85,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.67365646, y: 0.59021544, z: 0.12189484}
-  m_Center: {x: -0.16317177, y: 0.09431541, z: -0.0032539368}
+  m_Size: {x: 0.6736565, y: 0.27054, z: 1.8240197}
+  m_Center: {x: -0.16317177, y: -0.20191884, z: 0.09999704}
 --- !u!54 &7813900390034510291
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -131,7 +131,7 @@ MonoBehaviour:
   range: 100
   bulletsPerShot: 1
   spread: 0.05
-  bulletImpactPFX: {fileID: 0}
+  bulletImpactPFX: {fileID: 4749980201479958301, guid: 8fbf594af9c8f234c851e9b0011c2055, type: 3}
   bulletImpactDecal: {fileID: 0}
   bulletPrefab: {fileID: 0}
   firePoint: {fileID: 5456425731730906371}

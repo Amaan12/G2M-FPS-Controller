@@ -45,6 +45,7 @@ public class Bullet : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        collision.gameObject.GetComponent<IDamageable>()?.TakeDamage(10f);
         // Destroy the bullet on collision
         if (bulletPool != null) bulletPool.Return(this);
         else Destroy(gameObject);

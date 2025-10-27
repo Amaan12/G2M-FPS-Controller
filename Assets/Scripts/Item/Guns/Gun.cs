@@ -17,8 +17,8 @@ public class Gun : MonoBehaviour
     [SerializeField] Transform firePoint;
 
     [Header("Bullets")]
-    float ammo;
-    [SerializeField] float magSize;
+    int ammo;
+    [SerializeField] int magSize;
     bool reloading;
     float shootTimer = 0;
 
@@ -41,6 +41,8 @@ public class Gun : MonoBehaviour
     PlayerCam playerCam;
     ObjectPool<Bullet> bulletPool;
 
+    public static event System.Action<int, int> OnAmmoChanged;
+
     void Awake()
     {
         cam = Camera.main;
@@ -53,6 +55,8 @@ public class Gun : MonoBehaviour
     void OnEnable()
     {
         initialLocalPos = transform.localPosition;
+        
+        OnAmmoChanged?.Invoke(ammo, magSize);
     }
 
     virtual protected void Update()
@@ -66,6 +70,7 @@ public class Gun : MonoBehaviour
         {
             Shoot();
             ammo--;
+            OnAmmoChanged?.Invoke(ammo, magSize);
             shootTimer = fireRate;
         }
 
@@ -87,7 +92,7 @@ public class Gun : MonoBehaviour
             if (Physics.Raycast(cam.transform.position, shootDir, out RaycastHit hit, range))
             {
                 // Damage
-                var health = hit.collider.GetComponent<HealthController>();
+                var health = hit.collider.GetComponent<IDamageable>();
                 if (health != null) health.TakeDamage(damage);
 
                 // Impact FX
@@ -117,6 +122,7 @@ public class Gun : MonoBehaviour
         yield return new WaitForSeconds(reloadTime);
 
         ammo = magSize;
+        OnAmmoChanged?.Invoke(ammo, magSize);
         reloading = false;
         Debug.Log("Reloaded!");
     }
@@ -133,3 +139,4 @@ public class Gun : MonoBehaviour
         transform.localPosition = Vector3.Lerp(transform.localPosition, targetPos, Time.deltaTime * swaySmooth);
     }
 }
+

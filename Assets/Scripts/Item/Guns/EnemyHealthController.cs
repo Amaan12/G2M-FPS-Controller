@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class HealthController : MonoBehaviour
+public class EnemyHealthController : MonoBehaviour, IDamageable
 {
     public float maxHealth = 100f;
     public float health = 100f;
@@ -27,7 +27,7 @@ public class HealthController : MonoBehaviour
         }
     }
 
-    void Die()
+    public void Die()
     {
         if (enemyPool != null)
         {
