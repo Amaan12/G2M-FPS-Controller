@@ -1,4 +1,4 @@
-# G2M FPS Controller 🎯
+# G2M FPS Assignment 🎯
 > A fast-paced Unity FPS controller prototype with grenades, shooting, and enemy AI.
 
 ![Unity](https://img.shields.io/badge/engine-Unity-blue)
