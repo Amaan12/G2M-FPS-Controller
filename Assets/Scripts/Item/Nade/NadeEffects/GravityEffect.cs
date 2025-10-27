@@ -15,9 +15,6 @@ public class GravityEffect : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            other.GetComponentInParent<Rigidbody>().AddForce(Vector3.up * upwardForce, ForceMode.Acceleration);
-        }
+        other.GetComponentInParent<Rigidbody>().AddForce(Vector3.up * upwardForce, ForceMode.Acceleration);
     }
 }

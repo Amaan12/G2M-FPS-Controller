@@ -17,6 +17,7 @@ public class HENade : Nade
             if (hitRb != null)
             {
                 hitRb.AddExplosionForce(explosionForce, transform.position, nadeRadius);
+                hitRb.gameObject.GetComponent<IDamageable>()?.TakeDamage(40);
                 Debug.Log("Explosion force applied to: " + hit.name);
             }
 
